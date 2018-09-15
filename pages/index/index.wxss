@@ -63,6 +63,11 @@
   line-height: 40px;
 }
 
+.books-some {
+  float:right; 
+  margin-right: 40rpx;
+}
+
 .books-list {
   height: 280rpx;
   border-bottom: 1px solid #fff;

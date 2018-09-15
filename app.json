@@ -10,6 +10,7 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
+    "backgroundColor": "#fff",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -17,11 +18,11 @@
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "text": "分类"
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "text": "我"
       }
     ]
   }
