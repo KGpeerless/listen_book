@@ -1,0 +1,90 @@
+.user-login-info {
+  display: flex;
+  flex-direction:row;
+  height: 140rpx;
+  background-color: #636363;
+}
+.user-login-info .vip-icon {
+  line-height: 170rpx;
+  width: 60rpx; 
+  margin: 0rpx 30rpx 0rpx 60rpx;
+}
+
+.user-login-info text {
+  line-height: 152rpx;
+  font-size: 28rpx;
+  color: #CDAD00;
+}
+
+.user-login-info button {
+  line-height: 50rpx;
+  margin-top: 46rpx;
+  font-size: 26rpx;
+  height: 60rpx;
+  background-color: #CDAD00;
+  color: #636363;
+  width: 110rpx;
+  padding: 4rpx;
+}
+
+.commend-title {
+  border-bottom: 2rpx solid #e3d3e3;
+  height: 80rpx;
+}
+
+.commend {
+  background-color: #fff;
+}
+
+.commend-title text {
+  font-size: 0.85rem;
+  margin-left: 15px;
+  line-height: 40px;
+}
+
+.commend-list {
+  height: 280rpx;
+  border-bottom: 1px solid #fff;
+}
+
+.books {
+  margin-top: 14rpx;
+  background-color: #fff;
+}
+
+.books-title {
+  border-bottom: 2rpx solid #e3d3e3;
+  height: 80rpx;
+}
+
+.books-title text {
+  font-size: 0.85rem;
+  margin-left: 15px;
+  line-height: 40px;
+}
+
+.books-list {
+  height: 280rpx;
+  border-bottom: 1px solid #fff;
+}
+
+.like {
+  margin-top: 14rpx;
+  background-color: #fff;
+}
+
+.like-title {
+  border-bottom: 2rpx solid #e3d3e3;
+  height: 80rpx;
+}
+
+.like-title text {
+  font-size: 0.85rem;
+  margin-left: 15px;
+  line-height: 40px;
+}
+
+.like-list {
+  height: 280rpx;
+  border-bottom: 1px solid #fff;
+}

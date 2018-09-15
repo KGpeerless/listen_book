@@ -1,0 +1,34 @@
+<view class='body'>
+  <view class="user-login-info">
+    <view class="vip-icon">
+      <icon type="success"></icon>
+    </view>
+    <text>听书VIP·畅听千本好书</text>
+    <button size="mini">去开通</button>
+  </view>
+
+  <view class='commend'>
+    <view class="commend-title">
+      <text>主编推荐</text>
+    </view>
+    <view class="commend-list">
+    </view>
+  </view>
+
+  <view class='books'>
+    <view class="books-title">
+      <text>主题书单</text>
+      <text style="text-align:right">aaa</text>
+    </view>
+    <view class="books-list">
+    </view>
+  </view>
+
+  <view class='like'>
+    <view class="like-title">
+      <text>猜你喜欢</text>
+    </view>
+    <view class='like-list'>
+    </view>
+  </view>
+</view>
