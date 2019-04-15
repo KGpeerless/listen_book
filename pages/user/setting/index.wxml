@@ -1,0 +1,26 @@
+<!--pages/user/setting/index.wxml-->
+<view class="setting">
+  <image src="{{head}}" class="headpic" bindtap="uploadPhoto"></image>
+  <view class="tip">点击更换头像</view>
+
+  <view class="info">
+    <view class="title">昵称</view>
+    <input name="name" placeholder="请输入昵称" value="{{userProfit.realName}}" bindinput="realnameInput"/>
+  </view>
+  <view class="info">
+    <view class="title">性别</view>
+    <view class="sex active" wx:if="{{gender == '2'}}">
+      <image src="../../../images/woman_white.png"></image>女
+    </view>
+    <view class="sex" wx:if="{{gender == '1'}}" bindtap="choiceGender">
+      <image src="../../../images/woman_blue.png"></image>女
+    </view>
+    <view class="sex active" wx:if="{{gender == '1'}}">
+      <image src="../../../images/man_white.png"></image>男
+    </view>
+    <view class="sex" wx:if="{{gender == '2'}}" bindtap="choiceGender">
+      <image src="../../../images/man_blue.png"></image>男
+    </view>
+  </view>
+</view>
+<view class="btn" bindtap="updateUserInfo">保存</view>

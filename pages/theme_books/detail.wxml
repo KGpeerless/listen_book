@@ -1,0 +1,21 @@
+<import src="../templates/index/like_books/list-item.wxml" />
+
+<view class="banner" style="background-image: url({{theme.background}});">
+  <view class="cell">
+    <view class="title">{{theme.theme}}</view>
+    <view class="summary">{{theme.introduce}}</view>
+  </view>
+</view>
+
+<view class="record">
+  <text>{{theme.viewNumbers}}人看过</text>
+  <text>共{{theme.booksNumbers}}本</text>
+</view>
+
+<view class="like-books">
+  <view class="like-books-list">
+    <block wx:for="{{bookList}}" wx:key="bookId">
+      <template is="likeBooksByListItem" data="{{ ...item, userInfo: userInfo }}" />
+    </block>
+  </view>
+</view>

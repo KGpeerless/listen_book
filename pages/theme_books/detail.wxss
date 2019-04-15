@@ -1,0 +1,41 @@
+@import "../templates/index/like_books/list-item.wxss";
+
+.banner {
+  height: 400rpx;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.banner .cell {
+  width: 100%;
+  position: absolute;
+  bottom: 0rpx;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.banner .cell .title {
+  font-size: 30rpx;
+  font-weight: bold;
+  padding-top: 22rpx;
+  padding-left: 30rpx;
+}
+
+.banner .cell .summary {
+  font-size: 26rpx;
+  margin-top: 5rpx;
+  padding-bottom: 20rpx;
+  padding-left: 30rpx;
+}
+
+.record {
+  height: 80rpx; 
+  border-bottom: 2rpx solid #e3e3e3;
+}
+
+.record text {
+  padding: 0rpx 20rpx; 
+  font-size: 28rpx; 
+  line-height: 80rpx;
+  color: #707070;
+}

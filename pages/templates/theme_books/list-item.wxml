@@ -1,0 +1,21 @@
+<template name="themeBooksByListItem">
+  <navigator url="../theme_books/detail?themeId={{id}}">
+    <view class="book-item">
+    
+      <image src="{{cover}}" class="cover"></image>
+      <view class="content">
+        <view class="title">
+          <text>{{theme}}{{id}}</text>
+        </view>
+        <view class="summary">
+          <text>{{introduce}}</text>
+        </view>
+        <view class="record">
+          <text class='read-count'>{{viewNumbers}}人看过</text>
+          <text>共{{booksNumbers}}本</text>
+        </view>
+      </view>
+      <view class="go">></view>
+    </view>
+  </navigator>
+</template>

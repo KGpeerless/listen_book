@@ -1,0 +1,47 @@
+/* pages/user/poster/index.wxss */
+.content {
+  border-top: 1rpx solid #cccccc;
+  padding: 20rpx 30rpx;
+}
+.content .poster {
+  width: 100%;
+  border-radius: 10rpx;
+  box-shadow: 6rpx 6rpx 6rpx #cccbcb;
+}
+.code {
+  padding: 20rpx 48rpx;
+  float: left;
+  width: 100%;
+}
+.code image {
+  width: 140rpx;
+  height: 140rpx;
+  float: left;
+}
+.code .test {
+  float: left;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  padding: 40rpx 20rpx;
+}
+.foot {
+  clear: both;
+  position: relative;
+}
+.foot .line {
+  position: absolute;
+  top: 12rpx;
+  width: 100%;
+  border-bottom: 1rpx solid #e5e5e5; 
+}
+.foot .test {
+  font-size: 24rpx;
+  position: absolute;
+  top: 0;
+  background-color: #ffffff;
+  padding: 0 10rpx;
+  line-height: 24rpx;
+  color: #707070;
+  left: 160rpx;
+}
+.clear { clear:both;}

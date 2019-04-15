@@ -1,34 +1,137 @@
+<import src="../templates/index/commend_books/list-item.wxml" />
+<import src="../templates/index/theme_books/list-item.wxml" />
+<import src="../templates/index/like_books/list-item.wxml" />
+
 <view class="body">
-  <view class="user-login-info">
-    <view class="vip-icon">
-      <icon type="success"></icon>
-    </view>
+  <view class="user-login-info" wx:if="{{!userInfo.id || userInfo.id == 0}}">
+    <image src="../../images/vip_logo.png" class="vip-icon"></image>
     <text>听书VIP·畅听千本好书</text>
-    <button size="mini" bindtap="bindBooks">去开通</button>
+    <button size="mini" bindtap="bindVip">去开通</button>
   </view>
 
-  <view class="commend">
-    <view class="commend-title">
+  <view class="user" wx-if="{{userInfo.id > 0 && userVipInfo.vip_year.beginDate }}" bindtap="bindVip">
+    <view class="is-login">
+      <image src="{{userProfit.head}}" class="avatar"></image>
+      <view class="user-info">
+        <view class="user-name">
+          <text>{{userProfit.realName == '' ? userInfo.username : userProfit.realName}}</text>
+          <image src="../../images/year_card.png"></image>
+        </view>
+        <view class="user-vip">
+          <text>有效期：{{userVipInfo.vip_year.beginDate}} 至 {{userVipInfo.vip_year.endDate}}</text>
+        </view>
+        <view>
+          <image src="../../images/right_icon.png" style="width: 12rpx; height: 20rpx; position:absolute; top: 25rpx;right: 0rpx; padding: 40rpx"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="user" wx-if="{{userInfo.id > 0 && userVipInfo.vip_month.beginDate && !userVipInfo.vip_year.beginDate }}" bindtap="bindVip">
+    <view class="is-login">
+      <image src="{{userProfit.head}}" class="avatar"></image>
+      <view class="user-info">
+        <view class="user-name">
+          <text>{{userProfit.realName == '' ? userInfo.username : userProfit.realName}}</text>
+          <image src="../../images/month_card.png"></image>
+        </view>
+        <view class="user-vip">
+          <text>有效期：{{userVipInfo.vip_month.beginDate}} - {{userVipInfo.vip_month.endDate}}</text>
+        </view>
+        <view>
+          <image src="../../images/right_icon.png" style="width: 12rpx; height: 20rpx; position:absolute; top: 25rpx;right: 0rpx; padding: 40rpx"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="user" wx-if="{{userInfo.id > 0 && userVipInfo.vip_once > 0 && !userVipInfo.vip_year.beginDate && !userVipInfo.vip_month.beginDate }}" bindtap="bindVip">
+    <view class="is-login">
+      <image src="{{userProfit.head}}" class="avatar"></image>
+      <view class="user-info">
+        <view class="user-name">
+          <text>{{userProfit.realName == '' ? userInfo.username : userProfit.realName}}</text>
+          <image src="../../images/once_card.png"></image>
+        </view>
+        <view class="user-vip">
+          <text>剩余次数：{{userVipInfo.vip_once}}次</text>
+        </view>
+        <view>
+          <image src="../../images/right_icon.png" style="width: 12rpx; height: 20rpx; position:absolute; top: 25rpx;right: 0rpx; padding: 40rpx"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="user" wx-if="{{userInfo.id > 0 && !userVipInfo.vip_year.beginDate && !userVipInfo.vip_month.beginDate && userVipInfo.vip_once == 0}}" bindtap="bindVip">
+    <view class="is-login">
+      <image src="{{userProfit.head}}" class="avatar"></image>
+      <view class="user-novip-info">
+        <view class="user-novip-name">
+          <text>{{userProfit.realName == '' ? userInfo.username : userProfit.realName}}</text>
+          <image src="../../images/no_open.png"></image>
+        </view>
+        <view>
+          <image src="../../images/right_icon.png" style="width: 12rpx; height: 20rpx; position:absolute; top: 25rpx;right: 0rpx; padding: 40rpx"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="commend-books">
+    <view class="commend-books-title">
       <text>主编推荐</text>
     </view>
-    <view class="commend-list">
+    <view class="commend-books-list">
+      <scroll-view class="commend-books-scroll" scroll-x>
+        <block wx:for="{{commentBooks}}" wx:key="bookId">
+          <template is="commendBooksByListItem" data="{{...item, userInfo}}" />
+        </block>
+      </scroll-view>
     </view>
   </view>
 
-  <view class="books">
-    <view class="books-title">
+  <view class="theme-books">
+    <view class="theme-books-title">
       <text>主题书单</text>
-      <text class="books-some" bindtap="bindBooks">更多 ></text>
+      <text class="theme-books-some" bindtap="bindBooks">更多</text>
+      <image src="../../images/user_right_icon.png" style="width: 12rpx; height: 20rpx; position:absolute; margin-top:30rpx; right: 30rpx;"></image>
     </view>
-    <view class="books-list">
+    <view class="theme-books-list">
+      <block wx:for="{{themeBooks}}" wx:key="bookId" wx:for-index="idx">
+        <template is="themeBooksByListItem" data="{{...item, idx: idx}}" />
+      </block>
     </view>
   </view>
 
-  <view class="like">
-    <view class="like-title">
+  <view class="like-books">
+    <view class="like-books-title">
       <text>猜你喜欢</text>
+      <text class="like-books-switch" bindtap="nextBatchLikeBooks">换一换</text>
+      <image src="../../images/refresh_icon.png" bindtap="nextBatchLikeBooks" class="refresh"></image>
     </view>
-    <view class="like-list">
+    <view class="like-books-list">
+      <view class="like-book-item" wx:for="{{likeBooks}}" wx:key="bookId" data-uid="{{userInfo.id}}" data-mid="{{item.id}}" bindtap="bindBooksDetail">
+        <image src="{{item.coverImg}}"></image>
+        <view class="content">
+          <view class="title">
+            <text>{{item.title}} | {{item.unscramble}}</text>
+          </view>
+          <view class="summary">
+            <text>{{item.summary}}</text>
+          </view>
+          <view class="time">
+            <text>{{item.audioDuration}}</text>
+          </view>
+        </view>
+      </view>
     </view>
   </view>
+
+</view>
+
+<view class="invite{{isFirst ? '' : ' hide'}}" catchtouchmove="ture">
+  <image src="../../images/invit_bg.png" class="bg" mode="widthFix"></image>
+  <image src="../../images/close.png" class="close" bindtap="closeInvite"></image>
+  <view class="btn" bindtap="bingInvite">立即邀请</view>
 </view>

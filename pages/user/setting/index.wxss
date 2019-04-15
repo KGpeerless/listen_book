@@ -1,0 +1,72 @@
+/* pages/user/setting/index.wxss */
+.hide { 
+  display: none;
+}
+.setting {
+  border-top: 1px solid #cccbcb;
+  padding: 0 30rpx;
+  padding-top: 40rpx;
+}
+.setting .headpic {
+  width: 160rpx;
+  height: 160rpx;
+  display: block;
+  margin: 0 auto;
+  border-radius: 80rpx;
+}
+.setting .tip {
+  color: #707070;
+  font-size: 26rpx;
+  text-align: center;
+  margin-top: 25rpx;
+}
+.info {
+  color: #282828;
+  font-size: 28rpx;
+  height: 100rpx;
+  border-bottom: 1rpx solid #cccccc;
+}
+.info .title {
+  line-height: 100rpx;
+  float: left;
+  margin-right: 40rpx;
+}
+.info input {
+  width: 500rpx;
+  display: inline-block;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.info .sex {
+  float: right;
+  width: 128rpx;
+  height: 48rpx;
+  border: 1rpx solid #a6a6a6; 
+  color: #707070;
+  margin: 25rpx 0 25rpx 10rpx;
+  line-height: 48rpx;
+  border-radius:  8rpx; 
+  text-align: center;
+  font-size: 24rpx;
+}
+.info .sex image {
+  width: 21rpx;
+  height: 21rpx;
+  margin-right: 18rpx;
+}
+.info .active {
+  border-color: #29abae;
+  background-color: #29abae;
+  color: #ffffff;
+}
+.btn {
+  height: 80rpx;
+  font-size: 32rpx;
+  color: #ffffff;
+  text-align: center;
+  background-color: #29abae;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  line-height: 80rpx;
+}

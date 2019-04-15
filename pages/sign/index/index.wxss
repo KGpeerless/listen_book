@@ -1,0 +1,57 @@
+/* pages/login/index.wxss */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1rpx solid #cccccc; 
+ }
+ .logo image {
+  width: 192rpx;
+  height: 92rpx;
+  margin-top: 215rpx;
+  margin-bottom: 24px; 
+ }
+ .logo .slogn {
+  font-size: 32rpx;
+  color: #505050;
+ }
+
+.btn {
+  margin-top: 200rpx;
+  padding: 0 30rpx;
+}
+.btn .wx-login {
+  width: 100%;
+  color: #ffffff;
+  background-color: #29abae;
+  text-align: center;
+  border-radius: 8rpx;
+  line-height: 62rpx;
+  padding: 14rpx 0;
+  font-size: 40rpx;
+}
+.btn .wx-login image {
+  width: 80rpx;
+  height: 62rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.btn .other {
+  text-align: center;
+  margin-top: 50rpx;
+}
+.btn .other view {
+  display: inline-block;
+  font-size: 30rpx;
+  color: #505050;
+  line-height: 30rpx;
+}
+.btn .other .mobile-in {
+  padding-right: 20rpx;
+  border-right: 1rpx solid #505050;
+}
+.btn .other .mobile-up {
+  margin-left: 20rpx;
+}

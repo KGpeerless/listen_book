@@ -1,0 +1,8 @@
+<!--pages/user/poster/index.wxml-->
+<view style="border-top: 1rpx solid #e3e3e3"></view>
+<image src="{{posterUrl}}" style="height: 1143rpx; width: 100%;" bindtap="previewImage"></image>
+
+<view class="foot">
+  <view class="line"></view>
+  <view class="test">点击海报图，发送给朋友或保存到手机</view>
+</view>

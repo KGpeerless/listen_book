@@ -1,0 +1,190 @@
+@import "../templates/index/like_books/list-item.wxss";
+
+.user {
+  height: 140rpx;
+  background-color: #434343;
+}
+
+.user .not-login {
+  display: flex;
+  flex-direction:row;
+}
+
+.user .not-login .vip-icon {
+  width: 52rpx;
+  height: 49rpx;
+  margin: 55rpx 30rpx 0rpx 60rpx;
+}
+
+.user .not-login .info {
+  line-height: 152rpx;
+  font-size: 28rpx;
+  color: #CDAD00;
+  padding-right: 80rpx;
+}
+
+.user .not-login .go-login {
+  line-height: 50rpx;
+  margin-top: 46rpx;
+  margin-left: 130rpx;
+  font-size: 26rpx;
+  height: 60rpx;
+  color: #CDAD00;
+  width: 150rpx;
+  padding: 4rpx;
+}
+
+.user .is-login {
+  display: flex;
+  flex-direction:row;
+}
+
+.user .user-name {
+  margin-top: 15rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  color: #CDAD00;  
+}
+
+.user .user-name image {
+  width: 80rpx;
+  height:26rpx; 
+  margin-left: 30rpx;
+  vertical-align:middle;
+  margin-bottom: 7rpx;
+}
+
+.user .user-novip-name {
+  margin-top: 15rpx;
+  line-height: 120rpx;
+  font-size: 26rpx;
+  color: #CDAD00;  
+}
+
+.user .user-novip-name image {
+  width: 80rpx;
+  height:26rpx; 
+  margin-left: 30rpx;
+  vertical-align:middle;
+  margin-bottom: 7rpx;
+}
+
+.user .user-vip {
+  line-height: 0rpx;
+  font-size: 23rpx;
+  color: #CDAD00;
+}
+
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  vertical-align:middle;
+  margin: 20rpx 30rpx;
+}
+
+.vip-list {
+  height: 210rpx;
+}
+.vip-list .title {
+  height: 70rpx;
+  font-size: 28rpx;
+  padding: 0 30rpx;
+  line-height: 70rpx;
+  border-bottom: 2rpx solid #e3e3e3;
+}
+.vip-list .title text:nth-child(1) {
+  font-weight: bold;
+  color: #282828;
+}
+.vip-list .title text:nth-child(2) {
+   font-weight:unset;
+   float: right;
+   color: #707070;
+}
+
+.vip-list .content {
+  padding: 30rpx;
+}
+
+.vip-list .content .info {
+  font-size: 26rpx;
+  color: #707070;
+  white-space: pre-line;
+  width: 490rpx;
+  line-height: 40rpx;
+  float:left;
+}
+
+.vip-list .content .btn {
+  width: 180rpx;
+  background-color: #29abae;
+  color: #fff;
+  margin-top: 10rpx;
+  padding: 0 35rpx;
+}
+
+.like-books {
+  background-color: #fff;
+}
+
+.like-books-title {
+  height: 70rpx;
+  border-bottom: 2rpx solid #e3e3e3;
+}
+
+.like-books-title text {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  line-height: 75rpx;
+  color: #0a0a0a;
+}
+
+.like-books-list {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 100rpx; 
+}
+
+.vip-info-label {
+  height: 65rpx;
+  font-size: 30rpx;
+  border-bottom: 2rpx solid #e3e3e3;
+  line-height: 65rpx;
+  padding-left: 30rpx;
+  font-weight: bold;
+  color: #0a0a0a;
+}
+
+.vip-info-content {
+  margin:34rpx 30rpx 0 30rpx;
+  padding-bottom: 34rpx;
+  height: 105rpx;
+  border-bottom: 2rpx solid #e3e3e3;
+  display: flex;
+  flex-direction: row;
+}
+
+.vip-info-description {
+  padding: 0rpx 0rpx 0rpx 20rpx;
+}
+
+.vip-info-content image {
+  width: 90rpx;
+  height: 105rpx;
+  min-width: 90rpx;
+}
+
+.vip-info-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 30rpx;
+}
+
+.vip-info-summary {
+  white-space: pre-line;
+  font-size: 26rpx;
+  color: #808080;
+  margin-top: 20rpx;
+  line-height: 30rpx;
+}

@@ -1,0 +1,11 @@
+/* pages/user/book/index.wxss */
+@import "../../templates/index/like_books/list-item.wxss";
+
+.my-books {
+  border-top: 1px solid #cccbcb;
+  padding: 0 30rpx;
+}
+
+.like-book-item {
+  padding:30rpx 0;
+}

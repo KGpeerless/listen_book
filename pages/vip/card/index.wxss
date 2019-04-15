@@ -1,0 +1,94 @@
+.card {
+  border-top: 1rpx solid #e3e3e3;
+}
+
+.card image {
+  width: 94%;
+  padding: 3%;
+}
+
+.share {
+  margin-top: 25rpx;
+  position: relative;
+}
+.share .head {
+  height: 28rpx;
+}
+.share .line {
+  position: absolute;
+  border-bottom: 1rpx solid #cccccc;
+  width: 100%;
+  top: 14rpx;
+}
+.share .title {
+  position: absolute;
+  font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  padding: 0 10rpx;
+  margin: 0 auto;
+  background-color: #ffffff;
+  left: 270rpx;
+  color: #a1a1a1;
+}
+
+.card-number {
+  height: 60rpx;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+  padding: 10rpx 20rpx;
+}
+.card-number label {
+  width: 110rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+
+.card-number input {
+  border: 1rpx solid #e3e3e3;
+  width: 680rpx;
+  font-size: 30rpx;
+  height: 10rpx;
+  padding: 5rpx 10rpx;
+}
+
+.password {
+  height: 60rpx;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  padding: 10rpx 20rpx;
+  margin-top: 20rpx;
+}
+.password label {
+  width: 110rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+
+.password input {
+  border: 1rpx solid #e3e3e3;
+  width: 680rpx;
+  font-size: 30rpx;
+  height: 10rpx;
+  padding: 5rpx 10rpx;
+}
+
+.ps {
+  font-size: 24rpx;
+  color: #ff5555;
+  padding-left: 20rpx;
+}
+
+button {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0;
+}
+
+button ::after {
+  border-radius: 0;
+}

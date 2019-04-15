@@ -1,0 +1,20 @@
+<template name="commendBooksByListItem">
+  <view data-id="{{id}}" class="comment-book-item" data-uid="{{userInfo.id}}" data-mid="{{id}}" bindtap="bindBooksDetail">
+    <view class="comment-book-detail">
+      <image src="{{coverImg}}"></image>
+      <view class="content">
+        <view class="content-detail">
+          <view class="title">
+            <text>{{title}} | {{unscramble}}</text>
+          </view>
+          <view class="summary">
+            <text>{{summary}}</text>
+          </view>
+          <view class="time">
+            <text>{{audioDuration}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,95 @@
+.goods {
+  font-size: 28rpx;
+  padding: 20rpx;
+  height: 40rpx;
+  border-top: 2rpx solid #e3e3e3;
+  border-bottom: 2rpx solid #e3e3e3;
+  line-height: 50rpx;
+}
+
+.price {
+  font-size: 28rpx;
+  padding: 20rpx;
+  height: 40rpx;
+  border-bottom: 2rpx solid #e3e3e3;
+}
+
+.choice-type {
+  font-size: 28rpx;
+  padding: 20rpx;
+  height: 40rpx;
+  border-bottom: 2rpx solid #e3e3e3;
+}
+
+.wechat-pay {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  height: 70rpx;
+  border-bottom: 2rpx solid #e3e3e3;
+  padding: 25rpx 20rpx;
+}
+
+.wechat-pay .wechat {
+  font-size: 30rpx;
+  line-height: 70rpx;
+}
+
+.wechat-pay .choice-type-radio {
+  transform:scale(0.7);
+  margin-top: 6rpx;
+  position: absolute;
+  right: 20rpx;
+}
+
+.wechat-pay image {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 20rpx;
+}
+
+
+.balance-pay {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  height: 70rpx;
+  border-bottom: 2rpx solid #e3e3e3;
+  padding: 25rpx 20rpx;
+}
+
+.balance-pay .info .balance {
+  font-size: 30rpx;
+  line-height: 35rpx;
+}
+
+.balance-pay .info .user-balance {
+  font-size: 24rpx;
+  line-height: 50rpx;
+  color: #808080;
+}
+
+.balance-pay .choice-type-radio {
+  transform:scale(0.7);
+  margin-top: 6rpx;
+  position: absolute;
+  right: 20rpx;
+}
+
+.balance-pay image {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 20rpx;
+}
+
+.vip-info {
+  padding: 5rpx 20rpx;
+  font-size: 28rpx;
+  color: #707070;
+}
+
+.go-pay {
+  margin-top: 60rpx;
+  width: 90%;
+  margin-left: 5%;
+}

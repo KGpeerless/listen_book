@@ -1,0 +1,19 @@
+<template name="themeBooksByListItem">
+  <navigator url="../theme_books/detail?themeId={{id}}">
+    <view data-id="{{id}}" class="theme-book-item">
+      <view class="theme-book-detail">
+        <view class="cover">
+          <image src="{{cover}}"></image>
+        </view>
+        <view class="content">
+          <view class="title">
+            <text>{{theme}}</text>
+          </view>
+          <view class="summary">
+            <text>{{introduce}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</template>

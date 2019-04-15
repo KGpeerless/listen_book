@@ -1,0 +1,15 @@
+
+<view class="logo">
+  <image src="../../../images/logo.png"></image>
+  <text class="slogn">您的私人知识会所</text>
+</view>
+<view class="btn">
+  <button class="wx-login" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">
+    <image src="../../../images/wx_logo.png"></image>
+    微信登录
+  </button>
+  <view class="other">
+    <view class="mobile-in" bindtap="signin">手机登录</view>
+    <view class="mobile-up" bindtap="signup">手机注册</view>
+  </view>
+</view>

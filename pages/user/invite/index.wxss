@@ -1,0 +1,71 @@
+/* pages/user/invite/index.wxss */
+.info {
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #ffffff;
+  font-size: 26rpx;
+  background-color: #7f7f7f;
+  text-align: center;
+}
+.intro {
+  padding: 30rpx;
+  color: #282828;
+}
+.intro .content .title {
+  font-size: 28rpx;
+}
+.intro .content text {
+  font-size: 26rpx;
+}
+
+.share {
+  margin-top: 60rpx;
+  position: relative;
+}
+.share .head {
+  height: 28rpx;
+}
+.share .line {
+  position: absolute;
+  border-bottom: 1rpx solid #cccccc;
+  width: 100%;
+  top: 14rpx;
+}
+.share .title {
+  position: absolute;
+  font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  padding: 0 10rpx;
+  margin: 0 auto;
+  background-color: #ffffff;
+  left: 240rpx;
+}
+.share .obj {
+  margin-top: 70rpx;
+  color: #282828;
+  font-size: 26rpx;
+}
+.share .obj .item {
+  width: 33%;
+  text-align: center;
+  float: left;
+}
+.share .obj image {
+  width: 85rpx;
+  height: 70rpx;
+}
+.share .obj .test {
+  margin-top: 10rpx;
+}
+.item button {
+  border: 0!important; 
+  background-color: transparent;  
+  height:130rpx;
+  font-size: 26rpx;
+  line-height: 38rpx;
+  color: #282828;
+}
+button::after {
+  border: 0
+}

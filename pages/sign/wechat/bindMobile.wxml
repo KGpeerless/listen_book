@@ -1,0 +1,20 @@
+<view class="error" wx:if="{{errorMsg}}">{{errorMsg}}</view>
+<view class="forget">
+  <view class="title">{{title}}</view>
+
+  <view>
+    <view>
+      <view class="item-text">
+        <input type="number" value="{{formData.mobile}}" bindinput="mobileInput" placeholder="填写真实有效的手机号码" />
+      </view>
+      <view class="item-text">
+        <input type="text" value="{{formData.password}}" bindinput="passwordInput" placeholder="填写您的登录密码" />
+      </view>
+      <view class="item-text code">
+        <input value="{{verifyCode}}" bindinput="verifyCodeInput" placeholder="验证码" />
+        <view class="get {{codeClass}}" bindtap="{{codeTap}}">{{codeTitle}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="sure-btn" bindtap="checkCode">确认</view>
+</view>

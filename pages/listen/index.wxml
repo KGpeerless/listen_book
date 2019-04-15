@@ -1,0 +1,59 @@
+<!--pages/listen/index.wxml-->
+<loading hidden="{{isLoadingHidden}}">正在加载</loading>
+
+<view class="info">
+  <image src="{{bookImg}}"></image>
+  <view class="title">{{voiceTitle}}</view>
+  <view class="intro">{{voiceText}}</view>
+</view>
+
+<view class="listen{{isIphoneX ? ' listen-iphoneX' : ''}}">
+  <slider class="audio-slider" activeColor="#29abae" backgroundColor="#cccccc" block-size="16" bindchange="bindSliderChange" min="0" value="{{currentTime}}" max="{{duration}}" /> 
+  <view class="time">
+    <view class="startTime">{{showCurrentTime}}</view>
+    <view class="endTime">{{showDuration}}</view>
+  </view>
+  <view class="operation">
+    <view class="left"><image src="../../images/play_left.png" bindtap="bindBackTap"></image></view>
+    <view class="center"><image src="../../images/{{isPlayingMusic ? 'stop' : 'play'}}.png" bindtap="bindAudioTap"></image></view>
+    <view class="right"><image src="../../images/play_right.png" bindtap="bindSpeedTap"></image></view>
+  </view>
+</view>
+
+<view class="bottom{{isIphoneX ? ' iphoneX' : ''}}">
+  <view class="item" bindtap="listenContent">
+    <image src="../../images/draft_icon.png"></image>
+    <view>文稿</view>
+  </view>
+  <view class="item" bindtap="praise">
+    <image src="{{zanImg}}"></image>
+    <view>{{praiseNumber}}</view>
+  </view>
+</view>
+
+
+<block wx:if="{{listenState == 0 && uid == 0 && unlogin_tip_show == 1}}">
+  <view class="tip">
+    <view class="box">
+      <view class="test top">试听已结束</view>
+      <view class="test">登录后即可收听完整版</view>
+      <view class="tip-bottom">
+        <view class="border-r" bindtap="bindBack">返回</view>
+        <view class="show" bindtap="bingLogin">立即登录</view>
+      </view>
+    </view>
+  </view>
+</block>
+
+<block wx:if="{{listenState == 0 && uid != 0 && unvip_tip_show == 1}}">
+  <view class="tip">
+    <view class="box">
+      <view class="vip-test">抱歉！您暂未开通“每日听书”VIP</view>
+      <view class="vip-intro">您可选择立即开通VIP畅听全书籍或邀请3名好友加入“懂行”即可获得每日听书10本任意书籍的永收听资格</view>
+      <view class="tip-bottom">
+        <view class="border-r" bindtap="bindVip">开通VIP</view>
+        <view class="show" bindtap="bindInviter">邀请好友</view>
+      </view>
+    </view>
+  </view>
+</block>

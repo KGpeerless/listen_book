@@ -1,0 +1,92 @@
+/* pages/sign/inde.wxss */
+.title {
+  background-color: #efefef;
+  border-top: 1rpx solid #cccccc;
+}
+.title view {
+  width: 50%;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  display: inline-block;
+}
+.title .show {
+  color: #29abae;
+}
+.phone {
+  padding: 0 30rpx;
+}
+.phone .item-text {
+  border-bottom: 1rpx solid #efefef;
+  width: 100%;
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+.phone .item-text .name {
+  width: 30%;
+  display: inline-block;
+}
+.phone .item-text input {
+  width: 400rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  text-align:right;
+  float:right;
+}
+.code {
+  padding: 0 30rpx;
+}
+.code .item-text {
+  border-bottom: 1rpx solid #efefef;
+  width: 100%;
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+.code .item-text .name {
+  width: 20%;
+  display: inline-block;
+}
+.code .item-text input {
+  width: 400rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  display:inline-block;
+}
+.code .item-text .get-code {
+  line-height: 60rpx;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 30rpx;
+  border-radius: 30rpx;
+  background-color: #29abae;
+  float: right;
+}
+.code .item-text .active {
+  background-color: #999999;
+}
+
+.login-btn {
+  width: 500rpx;
+  background-color: #29abae;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  line-height: 82rpx;
+  margin: 0 auto;
+  margin-top: 84rpx;
+}
+.forget {
+    font-size: 26rpx;
+    color: #29abae;
+    float: right;
+    margin-top: 50rpx;
+    margin-right: 30rpx;
+}
+.hide {
+  display: none;
+}

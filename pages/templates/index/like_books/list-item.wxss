@@ -1,0 +1,48 @@
+.like-book-item {
+  height: 240rpx;
+  display: flex;
+  flex-direction: row;
+  padding: 30rpx;
+  border-bottom: 2rpx solid #e3e3e3;
+}
+
+.like-book-item image {
+  height: 240rpx;
+  width: 180rpx;
+  margin-right: 20rpx;
+}
+
+.like-book-item .content {
+  flex: 2;
+  height: 240rpx;
+  position: relative;
+}
+
+.like-book-item .content .title {
+  font-size: 32rpx;
+  white-space: pre-wrap;
+  font-weight: bold;
+  color: #0a0a0a;
+}
+
+.like-book-item .content .summary {
+  font-size: 26rpx;
+  padding-top: 10rpx;
+  height: 72rpx;
+  line-height: 36rpx;
+  color: #707070;
+  display: -webkit-box;
+  white-space: pre-wrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+}
+
+.like-book-item .content .time {
+  font-size: 26rpx;
+  color: #707070;
+  position: absolute;
+  bottom: 0;
+}

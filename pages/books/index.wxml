@@ -1,0 +1,87 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<import src="../templates/index/like_books/list-item.wxml" />
+
+<view class="cover">
+  <image src="{{book.backgroundImg}}"></image>
+</view>
+
+<view class="book-summary">
+  <text>{{book.title}}</text>
+</view>
+
+<view class="description">
+  <view class="title">
+    <text class="label">音频介绍</text>
+    <text class="time">音频时长：{{book.mindDetailPlayVo.audioDuration}}</text>
+  </view>
+</view>
+
+<view class="description-content">
+  <text>{{book.summary}}</text>
+</view>
+
+<view class="listens">
+  <view>
+    <template is="wxParse" data="{{wxParseData:introduction.nodes}}"/>
+  </view>
+</view>
+
+<view class="bole-commend">
+  <view class="title">
+    伯乐出品 质量保证
+  </view>
+  <scroll-view scroll-x>
+    <view class="list">
+      <view class="staff" wx:for="{{book.memberList}}" wx:key="key">
+        <image src="{{item.head}}"></image>
+        <view>
+          <view class="name"><text>{{item.name}}</text></view>
+          <view class="role"><text>{{item.roleText}}</text></view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="info">
+    <image src="../../images/success.png"></image>
+    <text>  {{book.memberList.length}}个环节<text class="time">{{book.createLength}}</text>小时精心打磨完成上线</text>
+  </view>
+</view>
+
+<view class="like-books{{isIphoneX ? ' bottom-iphoneX' : ''}}">
+  <view class="like-books-title" wx:if="{{recommendList.length > 0}}">
+    <text>同类推荐</text>
+  </view>
+  <view class="like-books-list" wx:if="{{recommendList.length > 0}}">
+    <block wx:for="{{recommendList}}" wx:key="bookId">
+      <template is="likeBooksByListItem" data="{{ ...item, userInfo: userInfo }}" />
+    </block>
+  </view>
+</view>
+
+
+<!-- 未登录 -->
+<view class="btn{{isIphoneX ? ' iphoneX' : ''}}" wx-if="{{userInfo.id == 0}}">
+  <button class="audition" bindtap="listen">试听</button>
+  <button class="login" bindtap="goLogin">登录收听完整版</button>
+</view>
+
+<!-- 已登录 不是会员、没有购买过此书、购买次数为0 -->
+<view class="btn{{isIphoneX ? ' iphoneX' : ''}}" wx-if="{{userInfo.id > 0 && (book.isBuy == 2 || book.isBuy == 4) && (book.isMember == 2 || book.isMember == 3)}}">
+  <button class="audition" bindtap="listen">试听</button>
+  <button class="open-vip" bindtap="goOpenVip">开通VIP立即拿下</button>
+</view> 
+
+<!-- 已登录 是会员 或者 已购买 -->
+<view class="btn{{isIphoneX ? ' iphoneX' : ''}}" wx-if="{{userInfo.id > 0 && (book.isBuy == 3 || book.isBuy == 1)}}">
+  <button class="play" bindtap="listen">播放</button>
+</view>
+
+<!-- 已登录 未购买 是会员 -->
+<view class="btn{{isIphoneX ? ' iphoneX' : ''}}" wx-if="{{userInfo.id > 0 && (book.isBuy == 4 || book.isBuy == 2) && book.isMember == 1}}">
+  <button class="buy" bindtap="vipBuy">拿下</button>
+</view>
+
+<!-- 已登录 未购买 是会员、或者有次数卡 -->
+<view class="btn{{isIphoneX ? ' iphoneX' : ''}}" wx-if="{{userInfo.id > 0 && (book.isBuy == 4 || book.isBuy == 2) && userVipInfo.vip_once > 0}}">
+  <button class="buy" bindtap="onceCardBuy">拿下</button>
+</view>

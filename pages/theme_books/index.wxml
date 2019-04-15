@@ -1,0 +1,6 @@
+<import src="../templates/theme_books/list-item.wxml" />
+<view>
+  <block wx:for="{{books}}" wx:key="bookId" wx:for-index="idx">
+    <template is="themeBooksByListItem" data="{{...item, idx: idx}}" />
+  </block>
+</view>

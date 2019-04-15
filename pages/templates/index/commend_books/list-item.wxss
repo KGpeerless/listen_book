@@ -1,0 +1,67 @@
+.comment-book-item {
+    height: 240rpx;
+    width: 460rpx;
+    display: inline-block;
+    padding: 20rpx 15rpx;
+}
+
+.comment-book-item .comment-book-detail {
+  display: flex;
+  flex-direction: row;
+  overflow-wrap: break-word;
+}
+
+.comment-book-item .comment-book-detail image {
+  height: 240rpx;
+  width: 180rpx;
+  margin-right: 20rpx;
+}
+
+.comment-book-item .content {
+  flex: 1;
+  width: 100rpx;
+  position: relative;
+}
+
+.comment-book-item .content .title {
+  font-size: 30rpx;
+  color: #011;
+  display: -webkit-box;
+  white-space: pre-wrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  font-weight: bold;
+  height: 80rpx;
+  line-height: 40rpx;
+}
+
+.comment-book-item .content .summary {
+  font-size: 24rpx;
+  height: 99rpx;
+  color: #808080;
+  width: 100%;
+  margin-top: 15rpx;
+}
+
+.comment-book-item .content .summary text {
+  height: 66rpx;
+  display: -webkit-box;
+  white-space: pre-wrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  line-height:33rpx;
+}
+
+.comment-book-item .content .time {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #808080;
+  position: absolute;
+  bottom: 0;
+}

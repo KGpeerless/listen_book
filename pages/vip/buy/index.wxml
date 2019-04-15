@@ -1,0 +1,58 @@
+<view class="goods">
+  <text>商品</text>
+  <text class="font-align-right">每日听书年费VIP</text>
+</view>
+
+<view class="price">
+  <text>总价</text>
+  <text class="font-color-f55 font-align-right">¥199.00</text>
+</view>
+
+<view class="mid-gary-cell"></view>
+
+<view class="choice-type">
+  <text>选择支付方式</text>
+</view>
+
+<radio-group bindchange="choicePayType">
+  <view class="wechat-pay" for="wechat">
+    <image src="../../../images/pay_type_2.png"></image>
+    <view class="wechat">
+      <text>微信支付</text>
+    </view>
+    <view class="choice-type-radio">
+      <radio id="wechat" checked="{{payType == 1 ? true : false}}" value="1"></radio>
+    </view>
+  </view>
+  <view class="balance-pay">
+    <image src="../../../images/pay_type_1.png"></image>
+    <view class="info">
+      <view class="balance">
+        <text>余额支付</text>
+      </view>
+      <view class="user-balance">
+        <text>余额：{{userAccount.mainBanlance}}元</text>
+      </view>
+    </view>
+    <view class="choice-type-radio">
+      <radio checked="{{payType == 2 ? true : false}}" value="2"></radio>
+    </view>
+  </view>
+</radio-group>
+
+<view class="vip-info mt-10">
+  ● 您开通VIP服务后，即在接下来的服务周期（365天）内享受VIP特权。
+</view>
+
+<view class="vip-info">
+  ● VIP状态到期时，需要您重新购买方可再次开通。
+</view>
+
+<view class="vip-info">
+  ● VIP服务自行开通成功后不支持退款，敬请谅解。
+</view>
+
+<view class="go-pay">
+  <button class="btn-bg-green" bindtap="pay" wx:if="{{payType == 1}}" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">立即付款</button>
+  <button class="btn-bg-green" bindtap="pay" wx:if="{{payType == 2}}">立即付款</button>
+</view>

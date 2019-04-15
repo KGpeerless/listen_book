@@ -1,28 +1,55 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/theme_books/index",
+    "pages/theme_books/detail",
+    "pages/books/index",
+    "pages/logs/logs",
+    "pages/sign/index/index",
+    "pages/sign/in/index",
+    "pages/sign/up/index",
+    "pages/user/index/index",
+    "pages/user/vip/index",
+    "pages/vip/index",
+    "pages/vip/buy/index",
+    "pages/vip/card/index",
+    "pages/user/book/index",
+    "pages/user/invite/index",
+    "pages/user/poster/index",
+    "pages/listen/index",
+    "pages/category/index",
+    "pages/sign/wechat/bindMobile",
+    "pages/listen_content/index",
+    "pages/user/setting/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "每日听书",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "backgroundColor": "#fff",
+    "selectedColor": "#29abae",
+    "color": "#282828",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "images/home_icon.png",
+        "selectedIconPath": "images/home_show_icon.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "分类"
+        "pagePath": "pages/category/index",
+        "text": "分类",
+        "iconPath": "images/category_icon.png",
+        "selectedIconPath": "images/category_show_icon.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "我"
+        "pagePath": "pages/user/index/index",
+        "text": "我",
+        "iconPath": "images/user_icon.png",
+        "selectedIconPath": "images/user_show_icon.png"
       }
     ]
   }

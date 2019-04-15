@@ -1,0 +1,238 @@
+@import "../templates/index/like_books/list-item.wxss";
+
+.cover {
+  height: 400rpx;
+  padding: 50rpx 0;
+  background-color: #efefef;
+}
+
+.cover image {
+  height: 400rpx;
+  width: 300rpx;
+  margin:0 auto;
+  display:block;
+  }
+
+.book-summary {
+  font-size: 36rpx;
+  margin: 26rpx 30rpx 0rpx 30rpx;
+  padding-bottom: 26rpx;
+  white-space: pre-line;
+  font-weight: bold;
+  border-bottom: 2rpx solid #e3e3e3;
+  color: #0a0a0a;
+}
+
+.description {
+  height: 80rpx;
+  font-size: 26rpx;
+}
+
+.description .title .label {
+  padding-left: 30rpx;
+  line-height: 80rpx;
+  font-weight: bold;
+  color: #0a0a0a;
+}
+
+.description .title .time {
+  float: right;
+  padding-right: 30rpx;
+  line-height: 80rpx;
+  color: #707070;
+}
+
+.description-content {
+  font-size: 28rpx;
+  margin: 0rpx 30rpx;
+  line-height: 40rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #e3e3e3;
+  color: #282828;
+}
+
+.listens {
+  border-bottom: 2rpx solid #e3e3e3;
+  padding-bottom: 20rpx;
+  margin:0 30rpx;
+  padding-top: 20rpx;
+}
+
+.listens .title {
+  margin: 20rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.listens .content {
+  margin: 0rpx 20rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+
+.commend-book {
+  border-bottom: 2rpx solid #e3e3e3;
+  padding-bottom: 20rpx;
+}
+
+.commend-book .title {
+  margin: 20rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.commend-book .content {
+  margin: 0rpx 20rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+
+.bole-commend {
+  padding: 20rpx 0rpx;
+  margin: 0rpx 30rpx;
+  border-bottom: 2rpx solid #e3e3e3;
+}
+
+.bole-commend .title {
+  font-size: 30rpx;
+  font-weight: bold;
+  padding-bottom: 24rpx;
+  color: #0a0a0a;
+}
+
+.bole-scroll {
+  width: 100rpx;
+}
+
+.bole-commend .list {
+  display: flex;
+  flex-direction: row;
+}
+
+.bole-commend .list .staff {
+  flex: 2;
+  margin-left: 0rpx;
+  padding-bottom: 20rpx;
+}
+
+.bole-commend .list .staff image {
+  width: 70rpx;
+  height: 70rpx;
+  margin: 0rpx 20rpx;
+  border-radius: 50%;
+}
+
+.bole-commend .list .staff .name {
+  font-size: 23rpx;
+  text-align: center;
+}
+
+.bole-commend .list .staff .role {
+  font-size: 20rpx;
+  text-align: center;
+  color: #808080;
+}
+
+.bole-commend .info {
+  font-size: 26rpx;
+  color: #808080;
+}
+
+.bole-commend .info image {
+  height: 25rpx; 
+  width: 25rpx;
+}
+
+.bole-commend .info .time{
+  color: #29abae;
+}
+
+.like-books {
+  background-color: #fff;
+  padding-bottom: 100rpx; 
+}
+
+.like-books-title {
+  height: 50rpx;
+}
+
+.like-books-title text {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  line-height: 70rpx;
+  color: #0a0a0a;
+}
+
+.like-books-list {
+  border-bottom: 1px solid #fff;
+}
+
+button::after {
+  border-radius: 0;
+  border-left: 0rpx;
+  border-right: 0rpx;
+}
+
+.btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+}
+button {
+  border-radius: 0;
+  border-left: 0rpx;
+  border-right: 0rpx;
+  font-size: 30rpx;
+  line-height: 95rpx;
+  height: 90rpx;
+}
+
+.audition {
+  width: 50%;
+  background-color: #fff;
+  float: left;
+  height: 100%;
+}
+
+.login {
+  width: 50%;
+  background-color: #29abae;
+  color: #fff;
+  float: right;
+  height: 100%;
+}
+
+.play {
+  width: 100%;
+  background-color: #29abae;
+  bottom: 0rpx;
+  color: #fff;
+  height: 100%;
+}
+
+.open-vip {
+  width: 50%;
+  background-color: #29abae;
+  bottom: 0rpx;
+  right: 0rpx;
+  color: #fff;
+  height: 100%;
+}
+
+.buy {
+  width: 100%;
+  background-color: #29abae;
+  bottom: 0rpx;
+  color: #fff;
+  height: 100%;
+}
+
+.bottom-iphoneX {
+  padding-bottom:168rpx;
+
+}
+.iphoneX {
+  height: 158rpx;
+}

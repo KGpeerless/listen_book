@@ -1,0 +1,26 @@
+<view class="error" wx:if="{{errorMsg}}">{{errorMsg}}</view>
+
+<view class="card">
+  <image src="../../../images/card.png"></image>
+</view>
+
+<view class="share">
+  <view class="head">
+    <view class="line"></view>
+    <view class="title">请选择分享方式</view>
+  </view>
+</view>
+
+ <view class="card-number">
+  <label>卡号：</label>
+  <input type="text" placeholder="请输入卡号" bindinput="cardNumberInput"></input>
+ </view>
+
+ <view class="password">
+  <label>密码：</label>
+  <input password placeholder="请输入密码" bindinput="passwordInput"></input>
+ </view>
+
+ <text class="ps">*懂行VIP实体年卡卡密格式为卡号16位、密码6位</text>
+
+ <button class="btn-bg-green" bindtap="cardActived">立即激活</button>

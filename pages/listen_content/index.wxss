@@ -1,0 +1,15 @@
+/* pages/listen_content/index.wxss */
+.title {
+  font-size: 32rpx;
+  color: #0a0a0a;
+  text-align: center;
+  padding: 0 30rpx;
+  line-height: 106rpx;
+  border-top: 1rpx solid #cccccc;
+  font-weight: 600;
+}
+.content {
+  font-size: 28rpx;
+  color: #282828;
+  padding: 0 30rpx;
+}

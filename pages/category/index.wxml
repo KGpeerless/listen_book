@@ -1,0 +1,24 @@
+<!--主盒子-->
+<view class="container">
+  <!--左侧栏-->
+  <view class="nav_left">
+    <block wx:for="{{categories}}" wx:key="key">
+      <view class="nav_left_items {{currentCategoryId == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</view>
+    </block>
+  </view>
+  <view class="nav_right">
+    <!--如果有数据，才遍历项-->
+    <view wx:if="{{books.length > 0}}">
+      <block wx:for="{{books}}" wx:key="key">
+        <view class="nav_right_items">
+          <navigator url="../books/index?uid={{userInfo ? userInfo.id : 0}}&mid={{item.id}}">
+            <image src="{{item.coverImg}}"></image>
+            <text>{{item.title}} | {{item.unscramble}}</text>
+          </navigator>
+        </view>
+      </block>
+    </view>
+    <!--如果无数据，则显示数据-->
+    <view class="nodata_text" wx:else>该分类暂无数据</view>
+  </view>
+</view>

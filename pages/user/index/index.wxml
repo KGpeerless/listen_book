@@ -1,0 +1,30 @@
+<!--pages/user/index.wxml-->
+<view class="info">
+  <image src="../../../images/user_bg.png" class="bg"></image>
+  <view class="user" wx:if="{{userInfo.id > 0}}">
+    <image src="{{userProfit.head}}" data-type="setting" bindtap="goPage"></image>
+    <view class="name" data-type="setting" bindtap="goPage">{{userProfit.realName == '' ? userInfo.username : userProfit.realName}}</view>
+  </view>
+  <view class="login" data-type="login" bindtap="goPage" wx:if="{{!userInfo || !userInfo.id || userInfo.id == 0}}">
+    <view class="btn">请登录</view>
+  </view>
+</view>
+
+<view class="item" data-type="vip" bindtap="goPage">
+  <image src="../../../images/user_vip_icon.png"></image>
+  <view>我的会员</view>
+  <image src="../../../images/user_right_icon.png"></image>
+</view>
+<view class="item" data-type="book" bindtap="goPage">
+  <image src="../../../images/user_book_icon.png"></image>
+  <view>我的听书</view>
+  <image src="../../../images/user_right_icon.png"></image>
+</view>
+<view class="item invite" data-type="invite" bindtap="goPage">
+  <image src="../../../images/user_invite_icon.png"></image>
+  <view>邀请好友</view>
+  <image src="../../../images/user_right_icon.png"></image>
+</view>
+<view class="logout" bindtap="logout" wx:if="{{userInfo.id > 0}}">退出登录</view>
+
+

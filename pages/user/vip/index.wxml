@@ -1,0 +1,36 @@
+<!--pages/user/vip/index.wxml-->
+<view class="list" wx:if="{{userVipInfo.vip_year.beginDate || userVipInfo.vip_month.beginDate || userVipInfo.vip_once > 0}}">
+  <view class="item" wx:if="{{userVipInfo.vip_year.beginDate}}">
+    <view class="icon"><image src="../../../images/vip_icon.png"></image></view>
+    <view class="content">
+      <view class="name">每日听书年度VIP</view>
+      <view class="time" wx:if="{{userVipInfo.vip_year}}">有效期：{{userVipInfo.vip_year.beginDate}}至{{userVipInfo.vip_year.endDate}}</view>
+      <view class="time" wx:if="{{!userVipInfo.vip_year}}">未开通</view>
+      <!-- <view class="time" wx:if="{{!userVipInfo.vip_year}}">失效</view> -->
+    </view>
+    <!-- <image src="../../../images/invalid.jpg" class="invalid"></image> -->
+  </view>
+
+  <view class="item" wx:if="{{userVipInfo.vip_once > 0}}">
+    <view class="icon"><image src="../../../images/count_icon.png"></image></view>
+    <view class="content">
+      <view class="name">每日听书次卡VIP</view>
+      <view class="time">剩余使用次数：{{userVipInfo.vip_once > 0 ? userVipInfo.vip_once : 0}}次</view>
+    </view>
+  </view>
+
+  <view class="item" wx:if="{{userVipInfo.vip_month.beginDate}}">
+    <view class="icon"><image src="../../../images/month_icon.png"></image></view>
+    <view class="content">
+      <view class="name">每月听书月卡VIP</view>
+       <view class="time" wx:if="{{userVipInfo.vip_month}}">有效期：{{userVipInfo.vip_month.beginDate}}至{{userVipInfo.vip_month.endDate}}</view>
+      <view class="time" wx:if="{{!userVipInfo.vip_month}}">未开通</view>
+      <!-- <view class="time" wx:if="{{!userVipInfo.vip_month}}">失效</view> -->
+    </view>
+    <!-- <image src="../../../images/invalid.jpg" class="invalid"></image> -->
+  </view>
+</view>
+
+<view wx:if="{{!userVipInfo.vip_year.beginDate && !userVipInfo.vip_month.beginDate && userVipInfo.vip_once == 0}}">
+  <text style="display:block; position:absolute; top: 40rpx; left: 230rpx; font-size: 30rpx;">抱歉，您暂未开通会员</text>
+</view>

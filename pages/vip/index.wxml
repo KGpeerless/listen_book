@@ -1,0 +1,168 @@
+<import src="../templates/index/like_books/list-item.wxml" />
+
+<view class="user" wx-if="{{!userInfo.id}}">
+  <view class="not-login">
+    <image src="../../images/vip_logo.png" class="vip-icon"></image>
+    <text class="info">懂行·每日听书</text>
+    <text class="go-login" bindtap="bindSign">登录/注册  ></text>
+  </view>
+</view>
+
+<view class="user" wx-if="{{userInfo.id > 0 && userVipInfo.vip_year.beginDate }}">
+  <view class="is-login">
+    <image src="{{userProfit.head}}" class="avatar"></image>
+    <view class="user-info">
+      <view class="user-name">
+        <text>{{userProfit.realName == '' ? userInfo.username : userProfit.realName}}</text><image src="../../images/year_card.png"></image>
+      </view>
+      <view class="user-vip">
+        <text>有效期：{{userVipInfo.vip_year.beginDate}} 至 {{userVipInfo.vip_year.endDate}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="user" wx-if="{{userInfo.id > 0 && userVipInfo.vip_month.beginDate && !userVipInfo.vip_year.beginDate }}">
+  <view class="is-login">
+    <image src="{{userInfo.headPhoto}}" class="avatar"></image>
+    <view class="user-info">
+      <view class="user-name">
+        <text>{{userInfo.username}}</text><image src="../../images/month_card.png"></image>
+      </view>
+      <view class="user-vip">
+        <text>有效期：{{userVipInfo.vip_month.beginDate}} - {{userVipInfo.vip_month.endDate}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="user" wx-if="{{userInfo.id > 0 && userVipInfo.vip_once > 0 && !userVipInfo.vip_year.beginDate && !userVipInfo.vip_month.beginDate }}">
+  <view class="is-login">
+    <image src="{{userProfit.head}}" class="avatar"></image>
+    <view class="user-info">
+      <view class="user-name">
+        <text>{{userProfit.realName == '' ? userInfo.username : userProfit.realName}}</text><image src="../../images/once_card.png"></image>
+      </view>
+      <view class="user-vip">
+        <text>剩余次数：{{userVipInfo.vip_once}}次</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="user" wx-if="{{userInfo.id > 0 && !userVipInfo.vip_year.beginDate && !userVipInfo.vip_month.beginDate && userVipInfo.vip_once == 0}}">
+  <view class="is-login">
+    <image src="{{userProfit.head}}" class="avatar"></image>
+    <view class="user-novip-info">
+      <view class="user-novip-name">
+        <text>{{userProfit.realName == '' ? userInfo.username : userProfit.realName}}</text><image src="../../images/no_open.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="vip-list">
+  <view class="title">
+    <text class="label">邀请好友得卡</text>
+    <text class="inviter">已邀请（{{inviterNumber}}/3）</text>
+  </view>
+  <view class="content">
+    <view class="info">
+      <text>邀请3名好友加入“懂行”，即可获得“每日听书”10本任意书籍永久收听权。</text>
+    </view>
+    <view style="float: right;">
+      <button class="btn" size="mini" style="background-color: #909090" wx:if="{{inviterNumber == 3}}">已获得</button>
+      <button class="btn" size="mini" wx:else bindtap="goInviter">立即邀请</button>
+    </view>
+  </view>
+</view>
+
+<view class="mid-gary-cell"></view>
+
+<view class="vip-list">
+  <view class="title">
+    <text class="label"><text class="font-green">￥{{price}}</text> 开通年度VIP</text>
+  </view>
+  <view class="content">
+    <view class="info">
+      <text>开通“每日听书”年度VIP，享受“每日听书”全书籍365天任意畅听及下载。</text>
+    </view>
+    <view style="float: right;">
+      <button class="btn" size="mini" bindtap="bindGoPay" wx:if="{{userVipInfo.vip_year.beginDate}}">去续费</button>
+      <button class="btn" size="mini" bindtap="bindGoPay" wx:else>立即开通</button>
+    </view>
+  </view>
+</view>
+
+<view class="mid-gary-cell"></view>
+
+<view class="vip-list">
+  <view class="title">
+    <text class="label">激活年度VIP实体卡</text>
+  </view>
+  <view class="content">
+    <view class="info">
+      <text>输入您购买的“每日听书”年度VIP实体卡背面的卡号、密码，开通VIP。</text>
+    </view>
+    <view style="float: right;">
+      <button class="btn" size="mini" bindtap="bindUseCard">立即激活</button>
+    </view>
+  </view>
+</view>
+
+<view class="mid-gary-cell"></view>
+
+<view class="vip-info">
+  <view class="description">
+    <view class="vip-info-label">
+      <text>VIP权益</text>
+    </view>
+    
+    <view class="vip-info-content">
+      <image src="../../images/book.png"></image>
+      <view class="vip-info-description">
+        <view class="vip-info-title">
+          <text>所有书任意听</text>
+        </view>
+        <view class="vip-info-summary">
+          <text>开通VIP后，有效期内所有「听书」都可以直接收听并任意下载。</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="vip-info-content">
+      <image src="../../images/team.png"></image>
+      <view class="vip-info-description">
+        <view class="vip-info-title">
+          <text>专业团队 打磨精品</text>
+        </view>
+        <view class="vip-info-summary">
+          <text>每一本听书都经过6道工序和平均203小时的打磨和把关。</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="vip-info-content">
+      <image src="../../images/theme_books.png"></image>
+      <view class="vip-info-description">
+        <view class="vip-info-title">
+          <text>为你精选主题书单</text>
+        </view>
+        <view class="vip-info-summary">
+          <text>为VIP定制的更多主题书单，方便你的选择与听书。</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="mid-gary-cell"></view>
+<view class="like-books">
+  <view class="like-books-title">
+    <text>VIP专享赠书·年度专享</text>
+  </view>
+  <view class="like-books-list">
+    <block wx:for="{{books}}" wx:key="bookId">
+      <template is="likeBooksByListItem" data="{{...item,userInfo:userInfo }}" />
+    </block>
+  </view>
+</view>

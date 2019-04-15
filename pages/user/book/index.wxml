@@ -1,0 +1,12 @@
+<!--pages/user/book/index.wxml-->
+<import src="../../templates/index/like_books/list-item.wxml" />
+<view class="my-books" wx:if="{{books.length >= 1}}">
+  <block wx:for="{{books}}" wx:key="bookId">
+    <template is="likeBooksByListItem" data="{{...item, userInfo:userInfo }}" />
+  </block>
+</view>
+
+
+<view wx:else>
+  <text style="display:block; position:absolute; top: 40rpx; left: 315rpx; font-size: 30rpx;">暂无书籍</text>
+</view>

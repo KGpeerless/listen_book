@@ -1,0 +1,29 @@
+<!--pages/user/invite/index.wxml-->
+<view class="info">您已成功邀请到{{inviterNumber}}名好友</view>
+<view class="intro">
+  <view class="content">
+    <view class="title">邀请规则</view>
+    <text>1、转发“懂行-每日听书小程序”或邀请海报至微信好友或朋友圈。
+    2、好友打开“懂行-每日听书小程序”或识别海报图中的二维码，并通过“懂行-每日听书小程序”注册成为“懂行”用户，即算成功邀请1名好友。
+    3、累计邀请3名好友注册成为“懂行”用户，即可获得“每日听书”10本任意书籍的永久收听权。
+    4、您邀请的好友也可通过转发“懂行-每日听书小程序”来邀请他/她的好友；成功邀请3名好友注册成为“懂行”用户，也可获得“每日听书”10本任意书籍的永久收听权。</text>
+  </view>
+  <view class="share">
+    <view class="head">
+      <view class="line"></view>
+      <view class="title">请选择分享方式</view>
+    </view>
+    <view class="obj">
+      <view class="item" bindtap="sharePoster">
+        <image src="../../../images/haibao_icon.png"></image>
+        <view class="test">生成海报图</view>
+      </view>
+       <view class="item">
+        <button open-type="share">
+          <image src="../../../images/wx_icon.png"></image>
+          <view class="test">微信好友</view>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

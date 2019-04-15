@@ -1,0 +1,45 @@
+/* pages/user/vip/index.wxss */
+.list {
+  padding: 30rpx;
+  border-top: 1px solid #cccbcb;
+}
+.list .item {
+  height: 200rpx;
+  padding: 0 30rpx;
+  border: 1px solid #cccbcb;
+  border-radius: 10rpx;
+  margin-bottom: 30rpx;
+  box-shadow:2rpx 2rpx 2rpx #cccbcb;
+  position: relative;
+}
+.list .item .icon {
+  width: 70rpx;
+  margin-right: 30rpx;
+  padding-top: 30rpx; 
+  float: left;
+}
+.list .item .icon image {
+  width: 70rpx;
+  height: 70rpx;
+}
+.list .item .content {
+  float: left;
+  color: #282828;
+  font-size: 26rpx;
+}
+.list .item .content .name {
+  height: 130rpx;
+  line-height: 130rpx;
+}
+.list .item .content .time {
+  border-top: 1rpx dashed #cccccc;
+  line-height: 70rpx;
+  width: 520rpx;
+}
+.invalid {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 128rpx;
+  height: 117rpx;
+}
